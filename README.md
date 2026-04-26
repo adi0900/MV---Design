@@ -1,52 +1,67 @@
 # MotionViz
-[Official Website](https://linktr.ee/motionviz)
 
-MotionViz is a visual-identity skill library for AI-assisted branding.
+<p align="center">
+  <img src="./Profile%20Pic%20Socials%201-1.png" alt="MotionViz" width="220" />
+</p>
 
-It is built to push models away from generic moodboards and toward brand work that feels intentional, reduced, coherent, and presentation-ready.
+<p>
+  <a href="https://linktr.ee/motionviz">
+    <img src="https://img.shields.io/badge/Official_Website-MotionViz-black?style=for-the-badge&logo=vercel" alt="Official Website" />
+  </a>
+</p>
 
-The current release is centered on identity-board generation: logo thinking, visual systems, typography, color logic, application mockups, and brand-guideline-style layouts.
+MotionViz is a skill library for AI-assisted visual identity work.
 
-`Visual Identity` `Brand Direction` `AI Workflows` `Premium Output`
+It is built for people who want branding outputs that feel directed and studio-grade, not generic and assembled at random. The focus is on logo logic, identity systems, typography, color discipline, application surfaces, and boards that read like compressed brand guidelines.
 
-## What This Repository Is For
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-2563eb?style=flat-square)](https://github.com/vercel-labs/agent-skills)
+[![GitHub stars](https://img.shields.io/github/stars/adi0900/MV---Design?style=flat-square&color=fbbf24)](https://github.com/adi0900/MV---Design/stargazers)
+[![AI Workflow](https://img.shields.io/badge/Works_With-GPT_API_%7C_FLORA_%7C_ChatGPT-111827?style=flat-square)](#workflow)
+[![Design Focus](https://img.shields.io/badge/Focus-Visual_Identity-6b7280?style=flat-square)](#)
 
-Most AI branding outputs fail in the same places: weak symbolism, disconnected panels, random palettes, cluttered boards, and marks with no strategic reason to exist.
+## Why MotionViz Exists
 
-MotionViz is designed to correct those failure points.
+Most AI-generated branding fails in predictable ways: the symbol is weak, the board is noisy, the palette is arbitrary, and the applications feel disconnected from the idea.
 
-These skills guide the model toward:
+MotionViz exists to push the model toward:
 
-- stronger symbolic logic
-- reduced and ownable marks
-- cleaner composition systems
-- more disciplined type and color choices
-- boards that read like compressed brand manuals
+- stronger symbolic reasoning
+- clearer system thinking
+- more ownable marks
+- tighter typography and color choices
+- presentations that feel curated rather than collaged
 
-## Contact
+## Current Release
 
-If you want to share feedback, suggest improvements, or contribute:
+MotionViz is currently on Day 1 of its rollout.
 
-- open an issue or pull request on GitHub
-- visit MotionViz: [https://linktr.ee/motionviz](https://linktr.ee/motionviz)
+Today’s release is the core branding skill:
 
-## Support the Project
+- `visual-identity/skills/BRANDING/Brand-MV.skill`
 
-If MotionViz is useful to you and you want to support the project directly:
+Day 1 is intentionally narrow. The goal is to establish the base MotionViz standard first, then expand the library after the core skill is stable and useful.
 
-- [Support MotionViz on Whop](https://whop.com/checkout/plan_wmAQHOcSQVt0G)
+For the rollout view, see `roadmap.md`.
 
-## Installation
+## Quick Start
 
-You can use this repository with tools that support imported skills or reusable instruction files.
+If your tool supports skill imports:
 
 ```bash
 npx skills add https://github.com/adi0900/MV---Design.git
 ```
 
-You can also use the files directly by copying a skill into your project context or pasting it into ChatGPT, FLORA, or a GPT API workflow.
+If not, just copy the skill file directly into your workflow or paste it into your tool of choice.
 
-## Repository Layout
+The current setup works well with:
+
+- GPT API
+- FLORA
+- ChatGPT
+
+Detailed usage examples live in `instructions.md`.
+
+## Repository Map
 
 ```text
 README.md
@@ -59,118 +74,95 @@ visual-identity/
     list.sh
 ```
 
-## Available Skill
+## Included Skill
 
-| Skill | Use Case |
+You do not need a large library to start. Right now the repository includes one foundational skill.
+
+| Skill | Role |
 | --- | --- |
-| `Brand-MV.skill` | MotionViz's core branding skill for generating premium visual identity boards, logo systems, layout-driven brand presentations, and coherent visual-world directions. Located in `visual-identity/skills/BRANDING/`. |
+| `Brand-MV.skill` | The core MotionViz branding skill. Use it for premium visual identity boards, reduced logo systems, type direction, color systems, application mockups, and coherent guideline-style presentations. |
 
-## 7-Day Build
+## What `Brand-MV.skill` Is Good For
 
-MotionViz is being released in stages.
+Use it when you want output that should feel:
 
-Day 1 is the foundation release: `Brand-MV.skill`.
+- strategic instead of decorative
+- minimal instead of overloaded
+- premium instead of generic
+- system-led instead of moodboard-led
+- usable in reviews, decks, and client-facing concept boards
 
-This means the current repository is centered around one core visual-identity skill that defines the MotionViz approach to:
+It is especially suited for:
 
-- strategic logo concepting
-- modular brand systems
-- editorial identity boards
-- typography and color logic
-- presentation-ready visual worlds
+- visual identity boards
+- logo system exploration
+- condensed brand-guideline presentations
+- visual world direction
+- typography and color studies
+- brand application surfaces
 
-More skill variants can come later, but Day 1 is intentionally narrow: get the main branding system right first.
+## Workflow
 
-This follows the broader MotionViz logic: lock the identity core, make it usable immediately, then expand from a strong base instead of releasing scattered variants too early.
+MotionViz is designed to be portable.
 
-## Current Rollout
+You can use the same skill in three practical ways:
 
-Right now, MotionViz is at Day 1.
+1. `GPT API`
+2. `FLORA`
+3. `ChatGPT`
 
-What has been shared today:
-
-- `Brand-MV.skill`
-
-What Day 1 is meant to establish:
-
-- the base MotionViz visual language
-- the identity-board generation standard
-- the core brand-system prompt architecture
-- repeatable output quality across GPT API, FLORA, and ChatGPT
-
-For the full rollout view, see `roadmap.md`.
-
-## When To Use `Brand-MV.skill`
-
-Use it when you need branding output that should feel:
-
-- strategic rather than decorative
-- minimal rather than cluttered
-- premium rather than generic
-- system-based rather than collage-driven
-- suitable for pitch decks, guideline boards, or concept presentations
-
-It is especially useful for:
-
-- logo exploration with strategic rationale
-- condensed guideline boards
-- visual identity systems
-- type and color direction
-- application surfaces and brand-world presentation
-
-## Workflow Options
-
-MotionViz can be used in several environments:
-
-- GPT API
-- FLORA
-- ChatGPT
-
-Detailed instructions for all three live in `instructions.md`.
+The recommended setup for each one is documented in `instructions.md`.
 
 ## Prompting Advice
 
-The best outputs usually come from giving the model real strategic inputs, not just style adjectives.
+The skill gets stronger when you give it strategy, not just style labels.
 
-Include things like:
+Include inputs like:
 
-- brand category
+- category
 - audience
 - emotional promise
 - symbolic metaphor
 - preferred visual mode
-- board layout
+- layout
 - aspect ratio
 
-Example direction:
+Example:
 
 ```text
 Create a premium 3 x 3 visual identity board for a modern fintech brand. The identity should feel calm, structured, and highly ownable. Use an institutional-trust mode with a reduced symbol, controlled palette, typography hierarchy, one application panel, and one construction panel.
 ```
 
-## Why It Works
+## Project Support
 
-The skill is structured to keep the model focused on brand logic before visual styling. That means the symbol, wordmark, palette, and applications are expected to come from a single idea instead of being invented independently.
+If MotionViz helps your workflow and you want to support the project directly:
 
-In practice, that produces branding outputs with better coherence and stronger presentation discipline.
+- [Support MotionViz on Whop](https://whop.com/checkout/plan_wmAQHOcSQVt0G)
+
+## Feedback
+
+If you want to contribute, suggest improvements, or point out issues:
+
+- open an issue or pull request on GitHub
+- visit MotionViz: [https://linktr.ee/motionviz](https://linktr.ee/motionviz)
 
 ## Notes
 
-- `Brand-MV.skill` is the main skill currently included in this repository.
-- this is the Day 1 release in the MotionViz rollout.
-- `visual-identity/skills/list.sh` can be used to list the available files under the skills directory.
-- the repository is built to expand with more MotionViz skill variants over time.
+- `Brand-MV.skill` is the current foundation release.
+- this repository is centered on visual identity generation, not frontend code generation.
+- `visual-identity/skills/list.sh` lists the files inside the skills directory.
+- more MotionViz variants can be added later, but only when they justify their own existence.
 
 ## Common Questions
 
-### Is this only for one type of brand?
+### Is MotionViz limited to one kind of brand?
 
-No. The skill is intentionally broad and can be used across technology, finance, wellness, culture, mobility, sustainability, luxury, and utility-driven products.
+No. The skill is broad enough for technology, finance, wellness, culture, luxury, mobility, sustainability, and utility-focused products.
 
-### Does this generate code?
+### Does this repository generate code?
 
-No. This repository is focused on visual identity generation and design-direction outputs, not frontend implementation.
+No. MotionViz is focused on identity generation and creative direction outputs.
 
-### What does the skill file do?
+### What does the skill file actually do?
 
-It acts as a reusable instruction layer that shapes how the model approaches identity design, board composition, logo strategy, and presentation quality.
+It acts as a reusable instruction layer that shapes how the model thinks about identity, symbolism, composition, presentation rhythm, and system coherence.
