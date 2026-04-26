@@ -30,6 +30,12 @@ If you want to share feedback, suggest improvements, or contribute:
 - open an issue or pull request on GitHub
 - visit MotionViz: [https://linktr.ee/motionviz](https://linktr.ee/motionviz)
 
+## Support the Project
+
+If MotionViz is useful to you and you want to support the project directly:
+
+- [Support MotionViz on Whop](https://whop.com/checkout/plan_wmAQHOcSQVt0G)
+
 ## Installation
 
 You can use this repository with tools that support imported skills or reusable instruction files.
