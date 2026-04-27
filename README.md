@@ -10,39 +10,40 @@
   </a>
 </p>
 
-MotionViz is a skill library for AI-assisted visual identity and web experience design.
+MotionViz is a compact design instruction library for people using AI to shape identity systems and product-site concepts.
 
-It is built for people who want outputs that feel directed, structured, and studio-grade instead of generic, noisy, or assembled at random. The library currently focuses on two adjacent design workflows: brand systems and premium product-site design.
+It is not trying to be a huge prompt warehouse. The point is to keep a small set of files that push the model toward cleaner judgment: stronger symbols, better page structure, tighter typography, less drift, less filler.
 
 [![Agent Skills](https://img.shields.io/badge/Agent_Skills-Compatible-2563eb?style=flat-square)](https://github.com/vercel-labs/agent-skills)
 [![GitHub stars](https://img.shields.io/github/stars/adi0900/MV---Design?style=flat-square&color=fbbf24)](https://github.com/adi0900/MV---Design/stargazers)
-[![AI Workflow](https://img.shields.io/badge/Works_With-GPT_API_%7C_FLORA_%7C_ChatGPT-111827?style=flat-square)](#workflow)
-[![Design Focus](https://img.shields.io/badge/Focus-Identity_%2B_Web_Experience-6b7280?style=flat-square)](#included-skills)
+[![AI Workflow](https://img.shields.io/badge/Works_With-GPT_API_%7C_FLORA_%7C_ChatGPT-111827?style=flat-square)](#how-to-use-it)
+[![Design Focus](https://img.shields.io/badge/Focus-Identity_%2B_Web_Experience-6b7280?style=flat-square)](#the-two-core-files)
 
-## Why MotionViz Exists
+## What This Repo Is Actually For
 
-Most AI-generated design work fails in predictable ways: weak symbols, noisy boards, arbitrary palettes, generic landing pages, cluttered layouts, and presentation logic that does not hold together.
+Most AI design output becomes generic in the same predictable ways. Brand work turns into a moodboard with a logo attached. Website work turns into a polished-looking page with no real structure underneath it.
 
-MotionViz exists to push the model toward:
+MotionViz is meant to intervene earlier than that. These files are instruction layers that try to change how the model frames the problem before it starts styling the answer.
 
-- stronger symbolic and structural reasoning
-- clearer system thinking
-- more ownable marks and more credible interfaces
-- tighter typography, spacing, and color choices
-- outputs that feel curated rather than collaged
+In practice, that means:
 
-## Current Repository Shape
+- identity work should feel reduced, ownable, and system-aware
+- website work should feel structured, credible, and product-specific
+- both should read like someone made decisions instead of collecting effects
 
-MotionViz currently has two core skill tracks:
+## The Two Core Files
 
-- `visual-identity/skills/BRANDING/Brand-MV.skill`
-- `website-design/skills/Design-MV.md`
+MotionViz currently stays deliberately narrow.
 
-These are the current foundation files. The goal is not to grow the library quickly. The goal is to keep the base strong, useful, and distinct before adding more variants.
+`visual-identity/skills/BRANDING/Brand-MV.skill`
+For identity boards, logo systems, typography direction, palette logic, brand applications, and compressed guideline-style outputs.
 
-For the broader direction, see `roadmap.md`.
+`website-design/skills/Design-MV.md`
+For landing pages, product-site concepts, interface-led website compositions, and full-page web experience direction.
 
-## Quick Start
+That is the real scope of the repository right now. More files should only appear when they solve a separate problem, not when they restate the same one in a new wrapper.
+
+## How To Use It
 
 If your tool supports skill imports:
 
@@ -50,17 +51,65 @@ If your tool supports skill imports:
 npx skills add https://github.com/adi0900/MV---Design.git
 ```
 
-If not, copy the relevant skill file directly into your workflow or paste it into your tool of choice.
+If it does not, open the file you want and paste it into your system or instruction layer.
 
-The current setup works well with:
+MotionViz is currently easiest to use with:
 
 - GPT API
 - FLORA
 - ChatGPT
 
-Detailed usage examples live in `instructions.md`.
+`instructions.md` contains the practical setup patterns.
 
-## Repository Map
+## Picking The Right File
+
+Choose `Brand-MV.skill` when the deliverable is fundamentally about identity logic.
+
+Good fits:
+
+- visual identity boards
+- mark exploration
+- typography and palette studies
+- compressed brand presentations
+- application mockups
+
+Choose `Design-MV.md` when the deliverable is fundamentally about page structure and interface presentation.
+
+Good fits:
+
+- landing pages
+- product marketing sites
+- infrastructure or developer-tool sites
+- hero-section explorations
+- full-page website concepts
+
+## Working Style
+
+MotionViz performs better when the input has a real center of gravity. Short prompts with only adjectives usually flatten the result.
+
+Useful inputs:
+
+- category
+- audience
+- operating mood
+- core metaphor
+- layout shape
+- aspect ratio
+- must-have sections or panels
+
+Identity example:
+
+```text
+Create a premium 3 x 3 identity board for a fintech company. The brand should feel calm, institutional, and highly reduced. Use a trust-led direction with one ownable symbol, controlled palette logic, typography hierarchy, one application panel, and one construction panel.
+```
+
+Website example:
+
+```text
+Create a premium full-page web experience for a distributed systems platform. The page should feel composed, exacting, and quietly advanced. Use a modular layout, node-based hero structure, feature blocks, a flow section, a metrics zone, and a terminal-style CTA.
+```
+
+## Repository Layout
 
 ```text
 README.md
@@ -76,122 +125,37 @@ website-design/
     Design-MV.md
 ```
 
-## Included Skills
+## Why The Library Is Small
 
-| Skill | Role |
-| --- | --- |
-| `Brand-MV.skill` | The core MotionViz visual-identity skill. Use it for premium identity boards, reduced logo systems, typography direction, color systems, application mockups, and guideline-style presentations. |
-| `Design-MV.md` | The core MotionViz web-experience skill. Use it for premium landing pages, product-site concepts, modular interface compositions, and technically credible full-page website directions. |
+This repo is intentionally biased toward restraint.
 
-## When To Use Each Skill
+- one strong file is better than five shallow variants
+- a new skill should earn its place through a real workflow gap
+- docs should clarify usage, not make the project feel bigger than it is
 
-### `Brand-MV.skill`
+That bias is part of the product, not a temporary limitation.
 
-Use it when you want output that should feel:
+## Support And Feedback
 
-- strategic instead of decorative
-- minimal instead of overloaded
-- premium instead of generic
-- system-led instead of moodboard-led
-- usable in reviews, decks, and client-facing concept boards
-
-It is especially suited for:
-
-- visual identity boards
-- logo system exploration
-- condensed brand-guideline presentations
-- visual world direction
-- typography and color studies
-- brand application surfaces
-
-### `Design-MV.md`
-
-Use it when you want output that should feel:
-
-- architectural instead of template-based
-- restrained instead of noisy
-- premium instead of startup-generic
-- technically credible instead of theatrical
-- built like a real product site instead of a marketing collage
-
-It is especially suited for:
-
-- landing-page direction
-- product marketing sites
-- developer platform websites
-- infrastructure-software presentations
-- single-section hero explorations
-- full-page web experience concepts
-
-## Workflow
-
-MotionViz is designed to be portable.
-
-You can use either skill in three practical ways:
-
-1. `GPT API`
-2. `FLORA`
-3. `ChatGPT`
-
-The recommended setup for each one is documented in `instructions.md`.
-
-## Prompting Advice
-
-Both skills get stronger when you give them strategy, not just style labels.
-
-Include inputs like:
-
-- category
-- audience
-- emotional promise or user feeling
-- symbolic or structural metaphor
-- preferred visual mode or territory
-- layout
-- aspect ratio
-
-### Identity Example
-
-```text
-Create a premium 3 x 3 visual identity board for a modern fintech brand. The identity should feel calm, structured, and highly ownable. Use an institutional-trust mode with a reduced symbol, controlled palette, typography hierarchy, one application panel, and one construction panel.
-```
-
-### Web Experience Example
-
-```text
-Create a premium full-page web experience for a distributed systems platform. The design should feel composed, exacting, and quietly advanced. Use a developer-infrastructure territory with a modular bento layout, node-based hero visualization, 6 feature modules, a service-flow section, metrics area, and terminal-style CTA. Dark mode with electric blue and cyan accents.
-```
-
-## Project Support
-
-If MotionViz helps your workflow and you want to support the project directly:
+Support MotionViz directly:
 
 - [Support MotionViz on Whop](https://whop.com/checkout/plan_wmAQHOcSQVt0G)
 
-## Feedback
-
-If you want to contribute, suggest improvements, or point out issues:
+If you want to suggest improvements or report issues:
 
 - open an issue or pull request on GitHub
 - visit MotionViz: [https://linktr.ee/motionviz](https://linktr.ee/motionviz)
 
-## Notes
+## A Few Direct Answers
 
-- `Brand-MV.skill` is the current visual-identity foundation.
-- `Design-MV.md` is the current website-design foundation.
-- this repository is centered on design generation and creative direction, not frontend code generation.
-- `visual-identity/skills/list.sh` lists files inside the visual-identity skills directory.
-- new MotionViz variants should only be added when they justify their own existence.
+### Does this generate code?
 
-## Common Questions
+No. This repository is for design direction and design-generation workflows, not frontend implementation.
 
-### Is MotionViz limited to one kind of brand or product?
+### Is it only for one kind of brand or software company?
 
-No. The current skills are broad enough for technology, finance, wellness, culture, luxury, mobility, sustainability, AI products, developer tools, and infrastructure-focused software.
+No. The current files are broad enough for technology, finance, AI, developer tools, infrastructure products, mobility, culture, wellness, and other system-led categories.
 
-### Does this repository generate code?
+### What do these files really do?
 
-No. MotionViz is focused on identity generation, web experience direction, and creative-system outputs.
-
-### What do the skill files actually do?
-
-They act as reusable instruction layers that shape how the model approaches identity, symbolism, composition, layout rhythm, interface architecture, and presentation coherence.
+They act as reusable design brief engines. They push the model toward stronger decisions about symbolism, hierarchy, layout rhythm, interface structure, and presentation quality.
