@@ -1,40 +1,44 @@
 # Instructions
 
-This file explains how to use `visual-identity/skills/BRANDING/Brand-MV.skill` in 3 different ways.
+This file explains how to use the current MotionViz repository.
 
-## Current Release Status
+There are now two primary skills:
 
-This is Day 1 of the MotionViz rollout.
+- `visual-identity/skills/BRANDING/Brand-MV.skill`
+- `website-design/skills/Design-MV.md`
 
-The skill shared for today is:
+Use `Brand-MV.skill` when you need visual identity output. Use `Design-MV.md` when you need a premium web experience, landing page, or product-site design direction.
 
-`visual-identity/skills/BRANDING/Brand-MV.skill`
+## Pick The Right Skill
 
-It is the foundation skill for the broader 7-day MotionViz plan and should be treated as the core visual-identity system prompt.
+### Use `Brand-MV.skill` for:
 
-Day 1 focus:
+- visual identity boards
+- logo systems
+- condensed brand-guideline presentations
+- typography and color studies
+- application mockups
 
-- establish the MotionViz branding standard
-- test output quality across tools
-- validate the board structure and identity-system logic
-- use one strong skill first before expanding the library
+### Use `Design-MV.md` for:
 
-## Skill Path
-
-`visual-identity/skills/BRANDING/Brand-MV.skill`
+- landing pages
+- product marketing sites
+- premium full-page web experiences
+- single-section hero concepts
+- interface-led website compositions
 
 ## 1. GPT API
 
-Use the skill content as a system or developer instruction, then send your brand brief as the user message.
+Use the chosen skill file as the instruction layer, then send your actual design brief as the user message.
 
 ### Recommended Flow
 
-1. Read the full `Brand-MV.skill` file.
-2. Put that content into your API request as the main instruction block.
-3. Send your brand prompt separately as the user input.
-4. Ask for one clear output format, such as a visual identity board prompt, a condensed board brief, or multiple art directions.
+1. Read the full skill file you want to use.
+2. Put that content into your API request as the system or developer instruction.
+3. Send the project brief separately as the user input.
+4. Ask for one clear output format.
 
-### Example Structure
+### Example Structure: Brand-MV
 
 ```json
 {
@@ -52,31 +56,43 @@ Use the skill content as a system or developer instruction, then send your brand
 }
 ```
 
+### Example Structure: Design-MV
+
+```json
+{
+  "model": "gpt-5.4",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Paste the full Design-MV.md content here"
+    },
+    {
+      "role": "user",
+      "content": "Create a premium full-page web experience for a distributed systems platform. Audience: engineering teams. Tone: exacting, quiet, advanced. Use a modular bento structure, visible routing logic, a metrics section, and a control-terminal CTA."
+    }
+  ]
+}
+```
+
 ### Best Practice
 
-- keep the skill intact
-- put the brand brief in the user message
-- specify board format, aspect ratio, and mode if needed
-- ask for image-generation-ready output if you want to pass it into an image model
-
-### Good Prompt Add-On
-
-```text
-Return the result as a polished image-generation prompt for a 3 x 3 premium identity board.
-```
+- keep the selected skill intact
+- put the actual brief in the user message
+- specify layout, aspect ratio, and output format when needed
+- ask for image-generation-ready output if that is your final handoff target
 
 ## 2. FLORA
 
-Use the skill as the project instruction layer, then give FLORA the specific brand assignment.
+Use the chosen MotionViz skill as the project instruction layer, then give FLORA the specific assignment.
 
 ### Recommended Flow
 
 1. Open your FLORA project or workflow.
-2. Paste the `Brand-MV.skill` content into the main instruction, style, or context field.
-3. Add the brand-specific prompt separately.
+2. Paste the selected skill content into the main instruction, style, or context field.
+3. Add the project-specific prompt separately.
 4. Generate and refine using references, layout direction, and output constraints.
 
-### Example FLORA Prompt
+### Example FLORA Prompt: Brand-MV
 
 ```text
 Create a premium visual identity board for a developer tools brand called Stackform.
@@ -93,25 +109,41 @@ Aspect ratio: 16:10
 Keep the symbol ownable, reduced, and system-based. Include logo construction, type system, color system, application panel, imagery direction, and one technical detail panel.
 ```
 
+### Example FLORA Prompt: Design-MV
+
+```text
+Create a premium web experience for an observability platform called Relay Scope.
+
+Category: developer infrastructure
+Audience: platform engineers and SRE teams
+Character: exacting, stable, quietly advanced
+User feeling: control through clarity
+Core metaphor: signal routing spine
+Layout: full-page vertical experience
+Aspect ratio: 16:10
+
+Include a restrained navigation bar, a central node-based hero, a 4 to 6 block feature grid, a service-flow section, a metrics zone, and a control-terminal CTA. Keep the page systematic and technically credible.
+```
+
 ### Best Practice
 
 - use the skill as the stable foundation
-- use FLORA references only for quality calibration, not copying
+- use references for calibration, not copying
+- iterate by changing strategy and structure, not only style adjectives
 - keep outputs restrained and presentation-ready
-- iterate by changing strategy, not just styling words
 
-## 3. GPT Chat
+## 3. ChatGPT
 
-Use the skill directly in ChatGPT by pasting it first, then asking for a specific brand identity output.
+Use the skill directly in ChatGPT by pasting it first, then asking for a specific output.
 
 ### Recommended Flow
 
 1. Start a new chat.
-2. Paste the full `Brand-MV.skill` content.
-3. After that, send your actual brand request.
-4. If needed, ask ChatGPT to convert the result into an image prompt, concept deck brief, or multiple directions.
+2. Paste the full skill file content.
+3. Send your real project request.
+4. Ask for a specific deliverable such as a refined prompt, concept deck brief, multiple directions, or a more compressed final pass.
 
-### Example Chat Prompt
+### Example Chat Prompt: Brand-MV
 
 ```text
 Use the skill above.
@@ -124,16 +156,29 @@ Preferred mode: Minimal Editorial mixed with Digital Modernist
 Output: 3 x 3 identity board with logo cover, construction logic, typography, color palette, application mockup, and imagery direction.
 ```
 
+### Example Chat Prompt: Design-MV
+
+```text
+Use the skill above.
+
+Create a premium landing-page concept for an AI infrastructure product called Foundry Grid.
+Audience: ML engineers and technical buyers
+Tone: composed, precise, infrastructure-grade
+Core metaphor: orchestrated model routing
+Preferred mode: developer infrastructure
+Output: full-page web experience with a calm hero, modular feature blocks, process flow section, metrics area, and terminal-style CTA.
+```
+
 ### Best Practice
 
-- be specific about category, audience, and metaphor
-- choose one visual mode if possible
+- be specific about category, audience, metaphor, and target feeling
+- choose one clear mode or territory when possible
 - ask for layout and aspect ratio explicitly
-- ask for a cleaner second pass if the first result feels too generic
+- ask for a cleaner second pass if the first result feels generic
 
-## Simple Prompt Template
+## Simple Prompt Templates
 
-Use this with any of the 3 methods:
+### Identity Template
 
 ```text
 Create a premium visual identity board for [Brand Name].
@@ -158,25 +203,49 @@ Include:
 - system detail
 ```
 
+### Web Experience Template
+
+```text
+Create a premium web experience for [Product Name].
+
+Category: [category]
+Audience: [audience]
+Character: [traits]
+User feeling: [promise]
+Core metaphor: [metaphor]
+Visual territory: [mode]
+Layout: [full-page / single-section / custom]
+Aspect ratio: [16:9 / 16:10 / custom]
+
+Include:
+- top navigation
+- hero section
+- feature modules
+- flow or process section
+- metrics area
+- CTA section
+```
+
 ## Output Tip
 
 If you want a stronger final result, ask for one of these explicitly:
 
 - image-generation-ready prompt
-- condensed guideline board brief
-- three distinct identity directions
-- premium-only refined pass
-- pixel-modernist variant
+- condensed guideline brief
+- three distinct directions
+- refined premium-only pass
+- single-section variation
+- full-page variation
 
-## 7-Day Plan Context
+## Repository Context
 
-If you are following the MotionViz rollout day by day, use Day 1 as the base layer.
+MotionViz currently spans identity and website design. That is the intended scope for now.
 
-That means:
+In practice, that means:
 
-- start by using `Brand-MV.skill` exactly as written
-- test it across GPT API, FLORA, and ChatGPT
-- focus on output quality, coherence, and repeatability
-- use the Day 1 version to establish the MotionViz standard before adding later skill variants
+- use `Brand-MV.skill` for brand-system work
+- use `Design-MV.md` for web-experience work
+- start with the core files as written before making custom variants
+- expand the library only when a new workflow genuinely needs its own skill
 
-This matches the broader MotionViz brand plan direction: visual identity first, then broader system expansion. In practical terms, Day 1 is about locking the identity logic, proving the output quality, and making sure the core skill is solid before additional releases are introduced.
+For the broader repository direction, see `roadmap.md`.

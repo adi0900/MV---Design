@@ -1,91 +1,100 @@
 # MotionViz Roadmap
 
-This document tracks the first 7 days of the MotionViz skill rollout.
+This document tracks the current MotionViz repository direction.
 
-The goal of the rollout is not to publish a large volume of files quickly. The goal is to establish a strong core, validate output quality, and expand the library with intention.
+MotionViz is no longer just a single Day 1 branding release. The repository now has two active foundations:
 
-## Day 1
+- `visual-identity/skills/BRANDING/Brand-MV.skill`
+- `website-design/skills/Design-MV.md`
 
-Release: `Brand-MV.skill`
+The goal is still the same: build a tight, high-quality skill library with clear use cases, strong output standards, and no filler variants.
+
+## Current State
+
+The repository currently covers two adjacent workflows:
+
+- visual identity generation for logos, systems, color, typography, and presentation boards
+- web experience design for premium landing pages, product sites, and interface-driven compositions
+
+This is the right scope for MotionViz right now. It is broad enough to be useful, but still narrow enough to maintain quality.
+
+## Near-Term Priorities
+
+### 1. Strengthen The Core Skills
 
 Focus:
 
-- define the MotionViz visual-identity standard
-- establish the core prompt architecture
-- validate output quality across GPT API, FLORA, and ChatGPT
-- make one strong branding skill usable immediately
+- continue refining `Brand-MV.skill` as the identity-system foundation
+- continue refining `Design-MV.md` as the web experience foundation
+- tighten weak areas through real output review, not theory alone
 
-Status:
+What matters most:
 
-- shared
-- documented in `README.md`
-- usage documented in `instructions.md`
+- clearer composition logic
+- stronger symbolic and structural reasoning
+- less generic output drift
+- better repeatability across tools
 
-## Day 2
+### 2. Improve Workflow Clarity
 
-Focus: prompt refinement and quality control
+Focus:
 
-Goals:
+- make the usage docs match the real repository structure
+- clarify where each skill should be used
+- keep setup simple across GPT API, FLORA, and ChatGPT
 
-- review outputs across multiple brand categories
-- tighten weak areas in symbol logic, panel rhythm, and typography direction
-- improve consistency without making the skill rigid
+The repository should be understandable at a glance. A user should know which file to use and why without reading unnecessary setup material.
 
-## Day 3
+### 3. Expand Only When A Skill Earns Its Place
 
-Focus: examples and references
+Future additions should only be introduced when they do work the current files should not handle directly.
 
-Goals:
+Good reasons to add a new skill:
 
-- add example brand briefs
-- add stronger prompt patterns for different brand categories
-- improve onboarding for first-time users of the skill
+- a clearly different design workflow
+- a different output format that needs its own logic
+- a repeated use case that is being forced awkwardly through the current files
 
-## Day 4
+Bad reasons to add a new skill:
 
-Focus: specialized variants
+- cosmetic duplication
+- shallow style variants
+- splitting files before the foundations are stable
 
-Goals:
+## Planned Direction
 
-- identify where a second skill variant is actually needed
-- separate general branding from more opinionated or niche workflows
-- avoid duplicating the base skill without a clear reason
+### Visual Identity Track
 
-## Day 5
+Primary file:
 
-Focus: workflow depth
+- `visual-identity/skills/BRANDING/Brand-MV.skill`
 
-Goals:
+Expected evolution:
 
-- improve multi-tool usage guidance
-- make the skill easier to use in GPT API, FLORA, and ChatGPT
-- refine the handoff from strategy prompt to image-generation-ready output
+- stronger examples and input patterns
+- tighter brand-category calibration
+- improved board consistency
+- more usable output handoff into image generation workflows
 
-## Day 6
+### Website Design Track
 
-Focus: documentation polish
+Primary file:
 
-Goals:
+- `website-design/skills/Design-MV.md`
 
-- improve README clarity and positioning
-- tighten usage instructions
-- make the repository easier to understand at a glance
+Expected evolution:
 
-## Day 7
-
-Focus: release review
-
-Goals:
-
-- review what performed best during the first week
-- decide what to keep, refine, or remove
-- set the next MotionViz release direction based on real usage
+- stronger layout rhythm guidance
+- more distinct web-experience territory definitions
+- cleaner conversion from product strategy into page structure
+- better prompt support for single-section and full-page outputs
 
 ## Principles
 
-The first week follows a few simple rules:
+MotionViz should keep following a few simple rules:
 
 - quality before volume
-- one clear system before multiple variants
-- strong visual logic before style expansion
-- documentation should support usage, not create noise
+- one strong system before multiple variants
+- structure before style noise
+- documentation should reduce friction, not create it
+- every new skill should justify its own existence
